@@ -63,10 +63,15 @@ else
 fi
 unset color_prompt force_color_prompt
 
+
+if [ -f /etc/bash_completion.d/git-prompt ]; then
+    . /etc/bash_completion.d/git-prompt
+fi
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    # PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\[\e[48;5;208m\]\u\[\e[0m\]@\[\e[32m\]\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\[\e[33m\]\$(__git_ps1 '(%s)')\[\e[0m\]\$ "
     ;;
 *)
     ;;
