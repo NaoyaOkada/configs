@@ -1,0 +1,12 @@
+[user]
+	email = oka.nao.41@gmail.com
+	name = NaoyaOkada
+[core]
+	editor = vim
+
+[alias]
+	df = diff
+	st = status
+	co = checkout
+	br = branch
+	
