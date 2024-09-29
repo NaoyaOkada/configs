@@ -1,0 +1,1 @@
+個人のwindowsマシーンのwsl2 ubuntuのbashrc
