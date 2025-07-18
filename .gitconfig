@@ -2,7 +2,10 @@
 	email = oka.nao.41@gmail.com
 	name = NaoyaOkada
 [core]
-	editor = vim
+	editor = cursor --wait
+	# --wait オプションは、エディタを使ってコミットメッセージなどを編集する際に、エディタのウィンドウが閉じるまで git の処理を待機させるためのものです。
+	# たとえば、`git commit` でエディタが起動したとき、--wait オプションが指定されていれば、エディタを閉じるまで git は次の処理に進みません。
+	# これにより、エディタでの編集が完了するまで安全に待つことができます。
 
 [alias]
 	df = diff
